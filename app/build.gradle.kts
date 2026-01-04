@@ -41,9 +41,8 @@ foundry {
 }
 
 dependencies {
-  implementation(project(":libs:base"))
-
   implementation(platform(libs.androidx.compose.bom))
+  implementation(project(":libs:base"))
   implementation(libs.accompanist.permissions)
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.material.icons.core)
