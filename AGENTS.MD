@@ -1,5 +1,9 @@
 # Agents Notes
 
+## General Guidelines
+
+@AGENT_CODING_GUIDELINES.md
+
 ## Dependency Injection
 
 This project uses [Metro](https://github.com/ZacSweers/metro) for Dependency Injection.
@@ -52,10 +56,11 @@ This project uses [Slack Foundry](https://github.com/slackhq/foundry) to configu
 1. **Plugins**: Apply `libs.plugins.foundry.base` along with `android.library` and `kotlin.android`.
 2. **Namespace**: Define the Android namespace.
 3. **Foundry Configuration**: Use the `foundry` block to enable features such as:
-  * `compose()`: Enables Jetpack Compose support.
-  * `metro()`: Enables Metro dependency injection support.
-  * `android { features { snapshotTests() } }`: Enables screenshot testing support (e.g., for
-    feature modules).
+
+* `compose()`: Enables Jetpack Compose support.
+* `metro()`: Enables Metro dependency injection support.
+* `android { features { snapshotTests() } }`: Enables screenshot testing support (e.g., for
+  feature modules).
 
 ### Example `build.gradle.kts`
 
