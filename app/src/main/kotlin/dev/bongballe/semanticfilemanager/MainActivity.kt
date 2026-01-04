@@ -11,19 +11,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.Folder
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -43,8 +36,9 @@ import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
+import dev.bongballe.features.browser.FileItem
+import dev.bongballe.libs.theme.SemanticFileManagerTheme
 import dev.bongballe.semanticfilemanager.ui.FileManagerViewModel
-import dev.bongballe.semanticfilemanager.ui.theme.SemanticFileManagerTheme
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -184,29 +178,5 @@ fun PermissionRationale(modifier: Modifier = Modifier) {
     verticalArrangement = Arrangement.Center,
   ) {
     Text("Permission required to access files.")
-  }
-}
-
-@Composable
-fun FileItem(
-  file: File,
-  onClick: () -> Unit,
-  modifier: Modifier = Modifier,
-) {
-  Row(
-    modifier =
-    modifier
-      .fillMaxWidth()
-      .clickable(onClick = onClick)
-      .padding(16.dp),
-    verticalAlignment = Alignment.CenterVertically,
-  ) {
-    Icon(
-      imageVector = if (file.isDirectory) Icons.Default.Folder else Icons.Default.Description,
-      contentDescription = null,
-      tint = MaterialTheme.colorScheme.primary,
-    )
-    Spacer(modifier = Modifier.width(16.dp))
-    Text(text = file.name)
   }
 }

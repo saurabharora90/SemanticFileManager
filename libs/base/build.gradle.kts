@@ -3,7 +3,6 @@ plugins {
   alias(libs.plugins.foundry.base)
   alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.serialization)
-  alias(libs.plugins.metro)
 }
 android {
   namespace = "dev.bongballe.libs.base"
@@ -16,6 +15,12 @@ android {
         "proguard-rules.pro",
       )
     }
+  }
+}
+
+foundry {
+  features {
+    metro()
   }
 }
 

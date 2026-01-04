@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "SemanticFileManager"
 include(":app")
 include(":libs:base")
+include(":features:browser")
+include(":libs:testing:screenshot")
+include(":libs:theme")

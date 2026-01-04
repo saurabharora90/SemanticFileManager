@@ -2,9 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.foundry.base)
   alias(libs.plugins.kotlin.android)
-  alias(libs.plugins.kotlin.compose)
   alias(libs.plugins.kotlin.serialization)
-  alias(libs.plugins.metro)
 }
 
 
@@ -37,25 +35,23 @@ android {
 foundry {
   features {
     compose()
+    metro()
   }
 }
 
 dependencies {
-  implementation(platform(libs.androidx.compose.bom))
+  implementation(platform(libs.compose.bom))
+  implementation(project(":features:browser"))
   implementation(project(":libs:base"))
+  implementation(project(":libs:theme"))
   implementation(libs.accompanist.permissions)
   implementation(libs.androidx.activity.compose)
-  implementation(libs.androidx.compose.material.icons.core)
-  implementation(libs.androidx.compose.material.icons.extended)
-  implementation(libs.androidx.compose.material3)
-  implementation(libs.androidx.compose.ui)
-  implementation(libs.androidx.compose.ui.graphics)
-  implementation(libs.androidx.compose.ui.tooling.preview)
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.lifecycle.runtime.ktx)
   implementation(libs.androidx.lifecycle.viewmodel.navigation3)
   implementation(libs.androidx.navigation3.runtime)
   implementation(libs.androidx.navigation3.ui)
+  implementation(libs.bundles.compose)
   implementation(libs.coil.compose)
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.serialization.core)
@@ -63,8 +59,7 @@ dependencies {
   implementation(libs.metrox.viewmodel)
   implementation(libs.metrox.viewmodel.compose)
 
-  debugImplementation(libs.androidx.compose.ui.test.manifest)
-  debugImplementation(libs.androidx.compose.ui.tooling)
+  debugImplementation(libs.bundles.compose.debug)
 
   testImplementation(libs.junit)
 }
