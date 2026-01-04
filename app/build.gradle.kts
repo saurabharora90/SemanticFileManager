@@ -41,6 +41,8 @@ foundry {
 }
 
 dependencies {
+  implementation(project(":libs:base"))
+
   implementation(platform(libs.androidx.compose.bom))
   implementation(libs.accompanist.permissions)
   implementation(libs.androidx.activity.compose)

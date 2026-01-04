@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SemanticFileManager"
 include(":app")
+include(":libs:base")
