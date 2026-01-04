@@ -47,6 +47,9 @@ kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 google-coreLibraryDesugaring = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "google-coreLibraryDesugaring" } #read by Foundry
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+metrox-android = { group = "dev.zacsweers.metro", name = "metrox-android", version.ref = "metro" }
+metrox-viewmodel = { group = "dev.zacsweers.metro", name = "metrox-viewmodel", version.ref = "metro" }
+metrox-viewmodel-compose = { group = "dev.zacsweers.metro", name = "metrox-viewmodel-compose", version.ref = "metro" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
