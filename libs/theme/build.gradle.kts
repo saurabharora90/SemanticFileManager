@@ -21,4 +21,5 @@ dependencies {
 
   implementation(libs.androidx.core.ktx)
   implementation(libs.compose.ui.tooling.preview)
+  implementation(libs.compose.ui.text.google.fonts)
 }
