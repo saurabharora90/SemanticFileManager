@@ -1,0 +1,52 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          java-version: '21'
+          # Enables caching between workflow runs.
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+
+      - name: Run checks (spotless, lint, detekt)
+        run: ./gradlew spotlessCheck globalCiLint globalCiDetekt
+
+      - name: Assemble debug build
+        run: ./gradlew assembleDebug
+
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest
+        continue-on-error: true
+
+      - name: Verify screenshot tests
+        run: ./gradlew globalCiVerifyRoborazzi
+        continue-on-error: true
+
+      - name: Test Summary
+        uses: test-summary/action@v2
+        with:
+          paths: "**/build/test-results/**/*.xml"
+        if: always()
+
+      - name: Upload Roborazzi reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: roborazzi-reports
+          path: "**/build/reports/roborazzi/**"
+
+      - name: Upload Roborazzi failure screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: roborazzi-failures
+          path: "**/build/outputs/roborazzi/**"
