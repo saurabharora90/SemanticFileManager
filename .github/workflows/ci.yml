@@ -24,7 +24,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v5
 
       - name: Run checks (spotless, lint, detekt)
-        run: ./gradlew spotlessCheck :app:lintDebug ciDetekt
+        run: ./gradlew spotlessCheck lintDebug ciDetekt
 
       - name: Assemble debug build
         run: ./gradlew assembleDebug
