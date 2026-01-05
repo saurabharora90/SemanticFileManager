@@ -1,4 +1,4 @@
-package dev.bongballe.semanticfilemanager.data
+package dev.bongballe.features.browser
 
 import dev.bongballe.libs.base.DispatcherType
 import dev.bongballe.libs.base.qualifier.WithDispatcherType
@@ -16,6 +16,25 @@ class FileRepository(@WithDispatcherType(DispatcherType.IO) private val ioContex
         directory.listFiles()?.toList()?.sortedBy { !it.isDirectory } ?: emptyList()
       } else {
         emptyList()
+      }
+    }
+
+  suspend fun deleteFile(file: File): Boolean =
+    withContext(ioContext) {
+      if (file.exists()) {
+        file.deleteRecursively()
+      } else {
+        false
+      }
+    }
+
+  suspend fun renameFile(file: File, newName: String): Boolean =
+    withContext(ioContext) {
+      if (file.exists()) {
+        val newFile = File(file.parent, newName)
+        file.renameTo(newFile)
+      } else {
+        false
       }
     }
 }

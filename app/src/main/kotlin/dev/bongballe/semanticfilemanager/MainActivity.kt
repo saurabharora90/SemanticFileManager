@@ -2,43 +2,48 @@ package dev.bongballe.semanticfilemanager
 
 import android.Manifest
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.core.net.toUri
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
-import dev.bongballe.features.browser.FileItem
+import dev.bongballe.features.browser.BrowserScreen
 import dev.bongballe.libs.theme.SemanticFileManagerTheme
-import dev.bongballe.semanticfilemanager.ui.FileManagerViewModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -46,11 +51,8 @@ import dev.zacsweers.metro.binding
 import dev.zacsweers.metrox.android.ActivityKey
 import dev.zacsweers.metrox.viewmodel.LocalMetroViewModelFactory
 import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
-import dev.zacsweers.metrox.viewmodel.metroViewModel
-import java.io.File
 
-data object RouteA
-data object RouteB
+data object RouteMain
 
 @ContributesIntoMap(AppScope::class, binding<Activity>())
 @ActivityKey(MainActivity::class)
@@ -61,7 +63,7 @@ class MainActivity(private val viewModelFactory: MetroViewModelFactory) : Compon
     super.onCreate(savedInstanceState)
     enableEdgeToEdge()
     setContent {
-      val backStack = remember { mutableStateListOf<Any>(RouteA) }
+      val backStack = remember { mutableStateListOf<Any>(RouteMain) }
       CompositionLocalProvider(LocalMetroViewModelFactory provides viewModelFactory) {
         SemanticFileManagerTheme {
           NavDisplay(
@@ -72,20 +74,8 @@ class MainActivity(private val viewModelFactory: MetroViewModelFactory) : Compon
               rememberViewModelStoreNavEntryDecorator(),
             ),
             entryProvider = entryProvider {
-              entry<RouteA> {
-                Text(
-                  text = "Welcome to Nav 3",
-                  modifier = Modifier
-                    .statusBarsPadding()
-                    .clickable {
-                      backStack.add(RouteB)
-                    },
-                )
-              }
-              entry<RouteB> {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                  FileManagerScreen(modifier = Modifier.padding(innerPadding))
-                }
+              entry<RouteMain> {
+                MainScreen()
               }
             },
           )
@@ -95,77 +85,133 @@ class MainActivity(private val viewModelFactory: MetroViewModelFactory) : Compon
   }
 }
 
-@OptIn(ExperimentalPermissionsApi::class)
+enum class AppTab {
+  Home,
+  Browse,
+  Settings,
+}
+
 @Composable
-fun FileManagerScreen(
-  modifier: Modifier = Modifier,
-  viewModel: FileManagerViewModel = metroViewModel(),
-) {
-  val currentPath by viewModel.currentPath.collectAsState()
-  val files by viewModel.files.collectAsState()
+fun MainScreen() {
+  var selectedTab by remember { mutableStateOf(AppTab.Home) }
 
-  val permissions =
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-      listOf(
-        Manifest.permission.READ_MEDIA_IMAGES,
-        Manifest.permission.READ_MEDIA_VIDEO,
-        Manifest.permission.READ_MEDIA_AUDIO,
-      )
-    } else {
-      listOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+  Scaffold(
+    bottomBar = {
+      NavigationBar {
+        NavigationBarItem(
+          selected = selectedTab == AppTab.Home,
+          onClick = { selectedTab = AppTab.Home },
+          icon = { Icon(painter = painterResource(id = R.drawable.ic_home), contentDescription = "Home") },
+          label = { Text("Home") },
+        )
+        NavigationBarItem(
+          selected = selectedTab == AppTab.Browse,
+          onClick = { selectedTab = AppTab.Browse },
+          icon = { Icon(painter = painterResource(id = R.drawable.ic_folder), contentDescription = "Browse") },
+          label = { Text("Browse") },
+        )
+        NavigationBarItem(
+          selected = selectedTab == AppTab.Settings,
+          onClick = { selectedTab = AppTab.Settings },
+          icon = { Icon(painter = painterResource(id = R.drawable.ic_settings), contentDescription = "Settings") },
+          label = { Text("Settings") },
+        )
+      }
+    },
+  ) { innerPadding ->
+    val modifier = Modifier.padding(innerPadding).fillMaxSize()
+    when (selectedTab) {
+      AppTab.Home -> HomeScreen(modifier)
+      AppTab.Browse -> FileManagerScreen(modifier)
+      AppTab.Settings -> SettingsScreen(modifier)
     }
-
-  val permissionState = rememberMultiplePermissionsState(permissions = permissions)
-
-  LaunchedEffect(key1 = permissionState.allPermissionsGranted) {
-    if (permissionState.allPermissionsGranted) {
-      viewModel.loadFiles(currentPath)
-    } else {
-      permissionState.launchMultiplePermissionRequest()
-    }
-  }
-
-  if (permissionState.allPermissionsGranted) {
-    FileBrowser(
-      currentPath = currentPath,
-      files = files,
-      onFileClick = viewModel::navigateTo,
-      onUpClick = viewModel::navigateUp,
-      modifier = modifier,
-    )
-  } else {
-    PermissionRationale(modifier)
   }
 }
 
 @Composable
-fun FileBrowser(
-  currentPath: String,
-  files: List<File>,
-  onFileClick: (File) -> Unit,
-  onUpClick: () -> Unit,
+fun HomeScreen(modifier: Modifier = Modifier) {
+  Column(
+    modifier = modifier,
+    horizontalAlignment = Alignment.CenterHorizontally,
+    verticalArrangement = Arrangement.Center,
+  ) {
+    Text("Home Screen")
+  }
+}
+
+@Composable
+fun SettingsScreen(modifier: Modifier = Modifier) {
+  Column(
+    modifier = modifier,
+    horizontalAlignment = Alignment.CenterHorizontally,
+    verticalArrangement = Arrangement.Center,
+  ) {
+    Text("Settings Screen")
+  }
+}
+
+@OptIn(ExperimentalPermissionsApi::class)
+@Composable
+fun FileManagerScreen(
   modifier: Modifier = Modifier,
 ) {
-  Column(modifier = modifier.fillMaxSize()) {
-    Text(
-      text = currentPath,
-      style = MaterialTheme.typography.bodySmall,
-      modifier = Modifier.padding(8.dp),
+  val context = LocalContext.current
+  var hasManageExternalStoragePermission by remember {
+    mutableStateOf(
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        Environment.isExternalStorageManager()
+      } else {
+        true
+      },
     )
-    if (currentPath != Environment.getExternalStorageDirectory().absolutePath) {
-      Text(
-        text = "..",
-        modifier =
-        Modifier
-          .clickable(onClick = onUpClick)
-          .padding(16.dp)
-          .fillMaxWidth(),
-      )
+  }
+
+  LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+      hasManageExternalStoragePermission = Environment.isExternalStorageManager()
     }
-    LazyColumn {
-      items(files) { file ->
-        FileItem(file = file, onClick = { onFileClick(file) })
+  }
+
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+    if (hasManageExternalStoragePermission) {
+      BrowserScreen(modifier = modifier)
+    } else {
+      Column(
+        modifier = modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+      ) {
+        Text("Permission required to access all files.")
+        Button(
+          onClick = {
+            val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+            intent.data = "package:${context.packageName}".toUri()
+            context.startActivity(intent)
+          },
+        ) {
+          Text("Grant Permission")
+        }
       }
+    }
+  } else {
+    val permissions =
+      listOf(
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+      )
+
+    val permissionState = rememberMultiplePermissionsState(permissions = permissions)
+
+    LaunchedEffect(key1 = permissionState.allPermissionsGranted) {
+      if (!permissionState.allPermissionsGranted) {
+        permissionState.launchMultiplePermissionRequest()
+      }
+    }
+
+    if (permissionState.allPermissionsGranted) {
+      BrowserScreen(modifier = modifier)
+    } else {
+      PermissionRationale(modifier)
     }
   }
 }
