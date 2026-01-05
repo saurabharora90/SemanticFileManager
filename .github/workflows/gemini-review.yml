@@ -39,7 +39,7 @@ jobs:
           permission-pull-requests: 'write'
 
       - name: 'Checkout repository'
-        uses: 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' # ratchet:actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: 'Run Gemini pull request review'
         uses: 'google-github-actions/run-gemini-cli@v0' # ratchet:exclude
@@ -99,10 +99,13 @@ jobs:
               },
               "tools": {
                 "core": [
+                  "read_file",
                   "run_shell_command(cat)",
                   "run_shell_command(echo)",
+                  "run_shell_command(find)",
                   "run_shell_command(grep)",
                   "run_shell_command(head)",
+                  "run_shell_command(ls)",
                   "run_shell_command(tail)"
                 ]
               }
