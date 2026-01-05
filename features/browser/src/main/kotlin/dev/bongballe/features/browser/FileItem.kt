@@ -41,7 +41,7 @@ fun FileItem(
       tint = MaterialTheme.colorScheme.primary,
     )
     Spacer(modifier = Modifier.width(16.dp))
-    Text(text = file.name, modifier = Modifier.weight(1f))
+    Text(text = file.name, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
     if (trailingContent != null) {
       trailingContent()
     }
