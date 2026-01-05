@@ -39,6 +39,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
+import dev.bongballe.libs.theme.SemanticFileManagerTheme
 import dev.zacsweers.metrox.viewmodel.metroViewModel
 import java.io.File
 
@@ -65,46 +66,48 @@ fun BrowserScreen(
     }
   }
 
-  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-    if (hasManageExternalStoragePermission) {
-      BrowserContent(viewModel = viewModel, modifier = modifier)
-    } else {
-      Column(
-        modifier = modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-      ) {
-        Text("Permission required to access all files.")
-        Button(
-          onClick = {
-            val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-            intent.data = "package:${context.packageName}".toUri()
-            context.startActivity(intent)
-          },
+  SemanticFileManagerTheme { // Wrap the entire content in the theme
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+      if (hasManageExternalStoragePermission) {
+        BrowserContent(viewModel = viewModel, modifier = modifier)
+      } else {
+        Column(
+          modifier = modifier.fillMaxSize(),
+          horizontalAlignment = Alignment.CenterHorizontally,
+          verticalArrangement = Arrangement.Center,
         ) {
-          Text("Grant Permission")
+          Text("Permission required to access all files.")
+          Button(
+            onClick = {
+              val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+              intent.data = "package:${context.packageName}".toUri()
+              context.startActivity(intent)
+            },
+          ) {
+            Text("Grant Permission")
+          }
         }
       }
-    }
-  } else {
-    val permissions =
-      listOf(
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-      )
-
-    val permissionState = rememberMultiplePermissionsState(permissions = permissions)
-
-    LaunchedEffect(key1 = permissionState.allPermissionsGranted) {
-      if (!permissionState.allPermissionsGranted) {
-        permissionState.launchMultiplePermissionRequest()
-      }
-    }
-
-    if (permissionState.allPermissionsGranted) {
-      BrowserContent(viewModel = viewModel, modifier = modifier)
     } else {
-      PermissionRationale(modifier)
+      val permissions =
+        listOf(
+          Manifest.permission.READ_EXTERNAL_STORAGE,
+          Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        )
+
+      val permissionState = rememberMultiplePermissionsState(permissions = permissions)
+
+      LaunchedEffect(key1 = permissionState.allPermissionsGranted) {
+        if (!permissionState.allPermissionsGranted) {
+          permissionState.launchMultiplePermissionRequest()
+        }
+      }
+
+      if (permissionState.allPermissionsGranted) {
+        BrowserContent(viewModel = viewModel, modifier = modifier)
+      } else {
+        PermissionRationale(modifier)
+      }
     }
   }
 }
