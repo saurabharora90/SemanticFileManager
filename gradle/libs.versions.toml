@@ -44,8 +44,6 @@ compose-animation = { group = "androidx.compose.animation", name = "animation" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-compose-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
@@ -85,6 +83,6 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 
 [bundles]
 common-test = ["junit", "truth"]
-compose = ["compose-animation", "compose-runtime", "compose-material3", "compose-ui", "compose-material-icons-core", "compose-material-icons-extended"]
+compose = ["compose-animation", "compose-runtime", "compose-material3", "compose-ui"]
 compose-debug = ["compose-ui-tooling", "compose-ui-tooling-preview"]
 compose-test = ["compose-ui-test-manifest", "compose-ui-test-junit4"]
