@@ -19,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -123,26 +124,31 @@ fun BrowserContent(
     viewModel.navigateUp()
   }
 
-  FileBrowser(
-    currentPath = currentPath,
-    files = files,
-    onFileClick = { file ->
-      if (file.isDirectory) {
-        viewModel.navigateTo(file)
-      } else {
-        val uri = FileProvider.getUriForFile(context, "${context.packageName}.provider", file)
-        val intent = Intent(Intent.ACTION_VIEW).apply {
-          setDataAndType(uri, context.contentResolver.getType(uri))
-          addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+  Surface(
+    modifier = modifier.fillMaxSize(),
+    color = MaterialTheme.colorScheme.background,
+    contentColor = MaterialTheme.colorScheme.onBackground,
+  ) {
+    FileBrowser(
+      currentPath = currentPath,
+      files = files,
+      onFileClick = { file ->
+        if (file.isDirectory) {
+          viewModel.navigateTo(file)
+        } else {
+          val uri = FileProvider.getUriForFile(context, "${context.packageName}.provider", file)
+          val intent = Intent(Intent.ACTION_VIEW).apply {
+            setDataAndType(uri, context.contentResolver.getType(uri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+          }
+          context.startActivity(Intent.createChooser(intent, "Open with"))
         }
-        context.startActivity(Intent.createChooser(intent, "Open with"))
-      }
-    },
-    onUpClick = viewModel::navigateUp,
-    onDeleteClick = viewModel::deleteFile,
-    onRenameClick = viewModel::renameFile,
-    modifier = modifier,
-  )
+      },
+      onUpClick = viewModel::navigateUp,
+      onDeleteClick = viewModel::deleteFile,
+      onRenameClick = viewModel::renameFile,
+    )
+  }
 }
 
 @Composable
