@@ -25,6 +25,8 @@ jobs:
       id-token: 'write'
       issues: 'write'
       pull-requests: 'write'
+    env:
+      GRADLE_OPTS: "-Dorg.gradle.daemon=true -Dorg.gradle.parallel=true -Dorg.gradle.caching=true"
     steps:
       - name: 'Mint identity token'
         id: 'mint_identity_token'
@@ -40,6 +42,17 @@ jobs:
 
       - name: 'Checkout repository'
         uses: actions/checkout@v6
+        with:
+          ref: '${{ github.event.pull_request.head.ref || github.event.pull_request.head.sha || github.sha }}'
+
+      - name: 'Set up JDK 21'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: 'Set up Gradle'
+        uses: gradle/actions/setup-gradle@v5
 
       - name: 'Run Gemini CLI'
         id: 'run_gemini'
@@ -49,10 +62,12 @@ jobs:
           DESCRIPTION: '${{ github.event.pull_request.body || github.event.issue.body }}'
           EVENT_NAME: '${{ github.event_name }}'
           GITHUB_TOKEN: '${{ steps.mint_identity_token.outputs.token || secrets.GITHUB_TOKEN || github.token }}'
-          IS_PULL_REQUEST: '${{ !!github.event.pull_request }}'
+          IS_PULL_REQUEST: '${{ !!github.event.pull_request || !!github.event.issue.pull_request }}'
           ISSUE_NUMBER: '${{ github.event.pull_request.number || github.event.issue.number }}'
           REPOSITORY: '${{ github.repository }}'
           ADDITIONAL_CONTEXT: '${{ inputs.additional_context }}'
+          PR_BRANCH: '${{ github.event.pull_request.head.ref }}'
+          PR_BASE_BRANCH: '${{ github.event.pull_request.base.ref }}'
         with:
           gcp_location: '${{ vars.GOOGLE_CLOUD_LOCATION }}'
           gcp_project_id: '${{ vars.GOOGLE_CLOUD_PROJECT }}'
@@ -179,6 +194,8 @@ jobs:
                 - **Issue/PR Number**: ${{ env.ISSUE_NUMBER }}
                 - **Repository**: ${{ env.REPOSITORY }}
                 - **Additional Context/Request**: ${{ env.ADDITIONAL_CONTEXT }}
+                - **PR Branch** (if commenting on existing PR): ${{ env.PR_BRANCH }}
+                - **PR Base Branch** (if commenting on existing PR): ${{ env.PR_BASE_BRANCH }}
 
             2. **Read Coding Guidelines**: Before starting any work, you **MUST** read `AGENTS.MD` using the `get_file_contents` tool. This file contains mandatory coding principles and project-specific guidelines that you must follow.
 
@@ -192,9 +209,7 @@ jobs:
 
             1. **Analyze Intent**: Determine the user's goal (bug fix, feature, etc.). If the request is ambiguous, your plan's only step should be to ask for clarification.
 
-            2. **Formulate & Post Plan**: Construct a detailed checklist. Include a **resource estimate**.
-
-                - **Plan Template:**
+            2. **Formulate Plan**: Construct a detailed checklist. Include a **resource estimate**. Use this template format:
 
                   ```markdown
                   ## 🤖 AI Assistant: Plan of Action
@@ -214,7 +229,7 @@ jobs:
                   Please review this plan. To approve, comment `/approve` on this issue. To reject, comment `/deny`.
                   ```
 
-            3. **Post the Plan**: Use `add_issue_comment` to post your plan.
+            3. **Post the Plan**: You **MUST** use the `add_issue_comment` tool to post your plan as a comment on the issue. Pass the issue number and your formatted plan as the comment body. Do not skip this step.
 
             ### B. Await Human Approval
 
@@ -226,11 +241,16 @@ jobs:
 
             ### C. Execute the Plan
 
-            1. **Perform Each Step**: Once approved, execute your plan sequentially.
+            1. **Check for Existing PR/Branch**:
+                - If **PR Branch** is provided in the initial context, you are working on an existing PR. Use that branch name for all changes.
+                - Do **NOT** create a new branch or new PR if **PR Branch** exists. Push changes to the existing branch using `create_or_update_file` with the existing branch name.
+                - If **PR Branch** is empty, this is a new task. Create a new branch and PR as normal.
 
-            2. **Handle Errors**: If a tool fails, analyze the error. If you can correct it (e.g., a typo in a filename), retry once. If it fails again, halt and post a comment explaining the error.
+            2. **Perform Each Step**: Once approved, execute your plan sequentially.
 
-            3. **Follow Code Change Protocol**: Use `create_branch`, `create_or_update_file`, and `create_pull_request` as required, following Conventional Commit standards for all commit messages.
+            3. **Handle Errors**: If a tool fails, analyze the error. If you can correct it (e.g., a typo in a filename), retry once. If it fails again, halt and post a comment explaining the error.
+
+            4. **Follow Code Change Protocol**: Use `create_branch` (only if creating new branch), `create_or_update_file`, and `create_pull_request` (only if creating new PR) as required, following Conventional Commit standards for all commit messages.
 
             ### D. Final Report
 
