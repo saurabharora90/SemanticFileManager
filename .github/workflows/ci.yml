@@ -32,11 +32,9 @@ jobs:
 
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
-        continue-on-error: true
 
       - name: Verify screenshot tests
         run: ./gradlew globalCiVerifyRoborazzi
-        continue-on-error: true
 
       - name: Test Summary
         uses: test-summary/action@v2
