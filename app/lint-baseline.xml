@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="true" name="AGP (8.13.2)" variant="all" version="8.13.2">
+
+    <issue
+        id="FontValidation"
+        message="For `minSdkVersion`=28 only `android:` attributes should be used"
+        errorLine1="        app:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/font/manrope_bold.xml"
+            line="3"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="FontValidation"
+        message="For `minSdkVersion`=28 only `android:` attributes should be used"
+        errorLine1="        app:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/font/manrope_extra_bold.xml"
+            line="3"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="FontValidation"
+        message="For `minSdkVersion`=28 only `android:` attributes should be used"
+        errorLine1="        app:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/font/manrope_medium.xml"
+            line="3"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="FontValidation"
+        message="For `minSdkVersion`=28 only `android:` attributes should be used"
+        errorLine1="        app:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/font/manrope_regular.xml"
+            line="3"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="FontValidation"
+        message="For `minSdkVersion`=28 only `android:` attributes should be used"
+        errorLine1="        app:fontProviderAuthority=&quot;com.google.android.gms.fonts&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/font/manrope_semi_bold.xml"
+            line="3"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ScopedStorage"
+        message="The Google Play store has a policy that limits usage of MANAGE_EXTERNAL_STORAGE"
+        errorLine1="  &lt;uses-permission android:name=&quot;android.permission.MANAGE_EXTERNAL_STORAGE&quot; />"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="10"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SelectedPhotoAccess"
+        message="Your app is currently not handling Selected Photos Access introduced in Android 14+"
+        errorLine1="  &lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_IMAGES&quot; />"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="7"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SelectedPhotoAccess"
+        message="Your app is currently not handling Selected Photos Access introduced in Android 14+"
+        errorLine1="  &lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_VIDEO&quot; />"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="8"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="998"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="152"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                               ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="176"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="200"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                           ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="396"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                   ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="420"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="444"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1096"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1120"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1144"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;MAwGA!&quot; instead of &quot;MAwGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1225"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="305"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;mtKoOD!&quot; instead of &quot;mtKoOD1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1330"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                               ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="112"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="356"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1056"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;wNfdIjIz!&quot; instead of &quot;wNfdIjIz1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="9"
+            column="1283"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="998"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="152"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                               ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="176"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="200"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                           ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="396"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                   ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="420"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="444"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1096"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1120"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;GA!&quot; instead of &quot;GA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1144"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;MAwGA!&quot; instead of &quot;MAwGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1225"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA!&quot; instead of &quot;NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="305"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;mtKoOD!&quot; instead of &quot;mtKoOD1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1330"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                               ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="112"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="356"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;pYTEWMBQGA!&quot; instead of &quot;pYTEWMBQGA1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1056"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="Did you mean &quot;wNfdIjIz!&quot; instead of &quot;wNfdIjIz1&quot;?"
+        errorLine1="            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPww+wPPyV958S8797+760Gh3oZGOLyvike72DedExS8vUcC7Z0QyQDTYyryO600SfqgDa+Gcs7y3TDvTRU2X1TC2ry9TK56e4yJOMCAPr5g6JbUy80lTx72I3y58fa7ILo7On0h02xNOIjn4nnUgRg09AeWY636iPpq0W9a4o1v6I5aI3g0rwDp35M4LiPt7lQ+GC0leInpNS8p32iDky29rV6c/4X6ly5SdW5YAnd41CyYC62bP6Cw5gw97u6HGz7ybrj2u5IrhLQQettiip3R0f507180E643caI0CAQOjgfwwgfkwHQYDVR0OBBYEFGbcvOFaIBEC5yVpE9rnFqR62FbeMIG4BgNVHSMEgbYwgbOAFGbcvOFaIBEC5yVpE9rnFqR62FbeoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JJr4XQoSXxcvymCwnKZMhDBAdM5sLilE2tR9LDlM51p19YnKDSLP+9uLtRaZw7tv60cRXI84n3FYvhal6vsraI66L1jy8W8qnh/K7HAcNnF7QLU6zF0KnVR9x9SXA2neL5KnL789qvWN4TRa0oterPMnHlQM9KNeZKOYpsF+sJ8rTzQZY5EgNq50Jl9oz5NB3jEu/2DTI14X5DL02zRcl1sy0iVIv/MWOueIw7KMFUGC94Wq6WM2qf0kUEkHExOdQueA8s7/z0l5Py859sM="
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~">
+        <location
+            file="src/main/res/values/font_certs.xml"
+            line="14"
+            column="1283"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_200` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_500` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_500&quot;>#FF6200EE&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_700` appears to be unused"
+        errorLine1="    &lt;color name=&quot;purple_700&quot;>#FF3700B3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.teal_200` appears to be unused"
+        errorLine1="    &lt;color name=&quot;teal_200&quot;>#FF03DAC5&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="6"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.teal_700` appears to be unused"
+        errorLine1="    &lt;color name=&quot;teal_700&quot;>#FF018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.black` appears to be unused"
+        errorLine1="    &lt;color name=&quot;black&quot;>#FF000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.white` appears to be unused"
+        errorLine1="    &lt;color name=&quot;white&quot;>#FFFFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.placeholder` appears to be unused">
+        <location
+            file="src/main/res/drawable/placeholder.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/placeholder.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/placeholder.png"/>
+    </issue>
+
+</issues>
