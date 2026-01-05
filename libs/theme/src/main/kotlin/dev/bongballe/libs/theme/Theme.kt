@@ -85,7 +85,7 @@ private val DarkColors =
 fun SemanticFileManagerTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
   // Dynamic color is available on Android 12+
-  dynamicColor: Boolean = false,
+  dynamicColor: Boolean = true, // Changed from false to true
   content: @Composable () -> Unit,
 ) {
   val colorScheme =
@@ -106,8 +106,8 @@ fun SemanticFileManagerTheme(
       // so the status bar color is handled by the system or the scaffold.
       // However, to avoid the deprecation warning which is treated as error, we can suppress it
       // or just rely on WindowCompat.
-      @Suppress("DEPRECATION")
-      window.statusBarColor = colorScheme.primary.toArgb()
+      // Removed: @Suppress("DEPRECATION")
+      // Removed: window.statusBarColor = colorScheme.primary.toArgb()
       WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
     }
   }
